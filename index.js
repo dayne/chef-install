@@ -13,6 +13,7 @@ async function main() {
 
     // Turn on problem matchers
     const matchersPath = path.join(__dirname, 'problem-matchers');
+    console.log(`Adding matcher for rubocop.json from ${path.join(matchersPath, 'rubocop.json')}`)
     console.log(`##[add-matcher]${path.join(matchersPath, 'rubocop.json')}`);
 
     // This tool has intimate knowledge of the os
