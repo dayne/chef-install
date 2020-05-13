@@ -13,8 +13,8 @@ async function main() {
 
     // Turn on problem matchers
     const matchersPath = path.join(__dirname, 'problem-matchers');
-    console.log(`Adding matcher for rubocop.json from ${path.join(matchersPath, 'rubocop.json')}`)
-    console.log(`##[add-matcher]${path.join(matchersPath, 'rubocop.json')}`);
+    console.log(`Adding matcher for rubocop.json from ${path.join(matchersPath, 'cookstyle.json')}`)
+    console.log(`##[add-matcher]${path.join(matchersPath, 'cookstyle.json')}`);
 
     // This tool has intimate knowledge of the os
     // as Windows and Linux/MacOs run different installers
