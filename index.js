@@ -9,6 +9,11 @@ async function main() {
     const project = core.getInput('project') || 'chef-workstation';
     const version = core.getInput('version');
     const omnitruckUrl = core.getInput('omnitruckUrl') || 'omnitruck.chef.io';
+
+    // Turn on problem matchers
+    const matchersPath = path.join(__dirname, '..', 'problem-matchers');
+    console.log(`##[add-matcher]${path.join(matchersPath, 'rubocop.json')}`);
+
     // This tool has intimate knowledge of the os
     // as Windows and Linux/MacOs run different installers
     // so we will check what OS and run appropriately
