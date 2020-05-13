@@ -2,9 +2,10 @@
   "problemMatcher": [
       {
           "owner": "cookstyle",
+          "severity": "error",
           "pattern": [
               {
-                  "regexp": "([^\\s].*)\\:(\\d+)\\:(\\d+)\\:\\s+([A-Z])\\:\\s+([^\\\\s].*)\\:\\s+(.*)",
+                  "regexp": "([^\\s].*)\\:(\\d+)\\:(\\d+)\\:\\s+([A-Q][S-Z])\\:\\s+([^\\\\s].*)\\:\\s+(.*)",
                   "file": 1,
                   "line": 2,
                   "column": 3,
@@ -12,6 +13,20 @@
                   "message": 6
               }
           ]
-      }
+      },
+      {
+        "owner": "cookstyle-refactor",
+        "severity": "warning",
+        "pattern": [
+            {
+                "regexp": "([^\\s].*)\\:(\\d+)\\:(\\d+)\\:\\s+([A-Q][S-Z])\\:\\s+([^\\\\s].*)\\:\\s+(.*)",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "code": 5,
+                "message": 6
+            }
+        ]
+    }
   ]
 }
